@@ -31,6 +31,18 @@ app.get("/about", (req, res) => {
     res.render("about");
 });
 
+app.get('/about/*', (req, res) => {
+    res.render('404', {
+        errorComments : "Opps about page could'nt be found !",
+    });
+});
+
+app.get('*', (req, res) => {
+    res.render('404', {
+        errorComments : "Opps page could'nt be found !",
+    });
+});
+
 // app.get("/", (req, res) => {
 //     res.send("<h1>hello world from the express, <br> this is new world for me and you make <br> a new things!</h2>");
 // });
