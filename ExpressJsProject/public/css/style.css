@@ -1,0 +1,19 @@
+h1 {
+    color: rgb(32, 13, 13);
+    font-size: 70px;
+    text-align: center;
+    font-weight: 700;
+}
+
+p {
+    font-size: large;
+    text-decoration: dotted;
+    font-weight: 800;
+    display: flex;
+
+}
+
+div .size {
+    height: 600px;
+}
+
