@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-{{>header_link}}
+    <head>
+        {{>header_link}}
+        <link rel="stylesheet" href="/css/style.css">
+
+    </head>
 <body>
-    {{>header}}
+    <div class="container-fluid">
+        <div class="row">
+            {{>header}}
 
-    <div class="page_not_found">
-        {{errorComments}}
-    </div>
-
-    <div class="row footer mt-5">
-        {{>footer}}
+            <div class="page_not_found">
+                    <div class="image_wrap">
+                        <img src="/images/404.gif" alt="">
+                    </div>
+                    <h3>
+                        {{errorComments}}
+                    </h3>
+            </div>
+            {{>footer}}
+        </div>
     </div>
 </body>
 </html>

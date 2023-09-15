@@ -9,7 +9,7 @@ const app = express();
 
 // console.log(path.join(__dirname, '../public'));
 // console.log(path.join(__dirname, "../templates"));
-console.log(path.join(__dirname, '../templates/partials'));
+// console.log(path.join(__dirname, '../templates/partials'));
 
 const staticPath = path.join(__dirname, '../public');
 const templatePath = path.join(__dirname, '../templates/views');
@@ -20,7 +20,7 @@ app.set("views", templatePath);
 hbs.registerPartials(partialsPath);
 
 // buitl in middleware in express js 
-// app.use(express.static(staticPath));
+app.use(express.static(staticPath));
 
 // middleware in express js for web page show
 app.get("/", (req, res) => {
